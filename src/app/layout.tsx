@@ -32,7 +32,7 @@ export default function RootLayout({
         >
           <SidebarProvider>
             <main>
-              <div className="flex h-screen w-screen bg-background">
+              <div className="flex h-min-screen w-screen bg-background">
                 <AppSidebar />
                 <div className="flex-auto p-8">{children}</div>
               </div>
