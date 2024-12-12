@@ -6,6 +6,9 @@ export function SidebarHeader() {
     <Link
       href="/"
       className="flex items-center justify-center gap-2 pt-6 cursor-pointer"
+      onClick={(e) => {
+        e.stopPropagation();
+      }}
     >
       <Image
         src="/VNNIC logo-01.png"

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/context/theme-provider";
+import { SidebarProvider } from "@/components/ui/sidebar";
+import AppSidebar from "@/components/dashboard/SideBar";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -28,7 +30,14 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <SidebarProvider>
+            <main>
+              <div className="flex h-screen w-screen bg-background">
+                <AppSidebar />
+                <div className="flex-auto p-8">{children}</div>
+              </div>
+            </main>
+          </SidebarProvider>
         </ThemeProvider>
       </body>
     </html>

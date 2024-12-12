@@ -1,7 +1,7 @@
 import React from "react";
 
 const page = () => {
-  return <div>Quản lý user</div>;
+  return <div>Gán nhãn dữ liệu</div>;
 };
 
 export default page;
