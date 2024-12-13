@@ -10,20 +10,35 @@ import {
 
 const invoices = [
     {
-        a: "INV001",
+        a: "domain 1",
         b: "Paid",
         c: "$250.00",
         d: "Credit Card",
         e: "zxczxczxc",
+        f: "domain 1",
+        g: "Paid",
+        h: "$250.00",
+        i: "Credit Card",
+        j: "zxczxczxc",
+        k: "Credit Card",
+        l: "zxczxczxc",
     },
     {
-        a: "INVs001",
+        a: "domain 1",
         b: "Paid",
         c: "$250.00",
         d: "Credit Card",
         e: "zxczxczxc",
+        f: "domain 1",
+        g: "Paid",
+        h: "$250.00",
+        i: "Credit Card",
+        j: "zxczxczxc",
+        k: "Credit Card",
+        l: "zxczxczxc",
     },
 ];
+
 
 export default function UserTable() {
     return (
@@ -32,11 +47,18 @@ export default function UserTable() {
                 <TableCaption>Danh sách user</TableCaption>
                 <TableHeader>
                     <TableRow>
-                        <TableHead className="font-bold">ID User</TableHead>
-                        <TableHead className="font-bold">Tên Đăng Nhập</TableHead>
-                        <TableHead className="font-bold">Mật Khẩu</TableHead>
-                        <TableHead className="font-bold">Họ và Tên</TableHead>
-                        <TableHead className="font-bold">Quyền Hạn</TableHead>
+                        <TableHead className="font-bold">Tên miền</TableHead>
+                        <TableHead className="font-bold">Nhãn</TableHead>
+                        <TableHead className="font-bold">Thể loại trang web</TableHead>
+                        <TableHead className="font-bold">Entropy</TableHead>
+                        <TableHead className="font-bold">Tỉ lệ chữ số</TableHead>
+                        <TableHead className="font-bold">Độ dài</TableHead>
+                        <TableHead className="font-bold">Kí tự đặc biệt</TableHead>
+                        <TableHead className="font-bold">Chứa từ nhạy cảm</TableHead>
+                        <TableHead className="font-bold">Meta-data</TableHead>
+                        <TableHead className="font-bold">Tên miền chính thống</TableHead>
+                        <TableHead className="font-bold">Ghi chú</TableHead>
+                        <TableHead className="font-bold">Last update</TableHead>
                         <TableHead></TableHead>
                         <TableHead></TableHead>
                     </TableRow>
@@ -49,6 +71,13 @@ export default function UserTable() {
                             <TableCell>{invoice.c}</TableCell>
                             <TableCell>{invoice.d}</TableCell>
                             <TableCell>{invoice.e}</TableCell>
+                            <TableCell>{invoice.f}</TableCell>
+                            <TableCell>{invoice.g}</TableCell>
+                            <TableCell>{invoice.h}</TableCell>
+                            <TableCell>{invoice.i}</TableCell>
+                            <TableCell>{invoice.j}</TableCell>
+                            <TableCell>{invoice.k}</TableCell>
+                            <TableCell>{invoice.l}</TableCell>
                             <TableCell>
                                 <button
                                     type="submit"
