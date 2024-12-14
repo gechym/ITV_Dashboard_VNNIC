@@ -11,7 +11,7 @@ import {
 const invoices = [
     {
         a: "domain 1",
-        b: "Paid",
+        b: "abc",
         c: "$250.00",
         d: "Credit Card",
         e: "zxczxczxc",
@@ -25,7 +25,7 @@ const invoices = [
     },
     {
         a: "domain 1",
-        b: "Paid",
+        b: "zxc",
         c: "$250.00",
         d: "Credit Card",
         e: "zxczxczxc",
@@ -66,8 +66,20 @@ export default function UserTable() {
                 <TableBody>
                     {invoices.map((invoice) => (
                         <TableRow key={invoice.a}>
-                            <TableCell className="font-medium">{invoice.a}</TableCell>
-                            <TableCell>{invoice.b}</TableCell>
+                            <TableCell>{invoice.a}</TableCell>
+                            <TableCell className="p-2">
+                                <span
+                                    className={`inline-block px-1 rounded-lg ${invoice.b === 'abc'
+                                            ? "bg-green-100 text-green-700"
+                                            : "bg-red-100 text-red-700"
+                                        }`}
+                                >
+                                    {invoice.b}
+                                </span>
+                            </TableCell>
+
+
+
                             <TableCell>{invoice.c}</TableCell>
                             <TableCell>{invoice.d}</TableCell>
                             <TableCell>{invoice.e}</TableCell>
